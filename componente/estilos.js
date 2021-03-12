@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 import imageHero from "../assests/imageHero.jpg";
-import hamburger from "../assests/hamburger.svg";
 
 export const Content = styled.header`
   width: 100%;
@@ -16,16 +15,15 @@ export const Main = styled.div`
   height: 128px;
   background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.0001) 100%);
   padding: 30px;
+  list-style: none;
   .img {
     margin-top: 60px;
     transition: 3s;
     cursor: pointer;
-    
   }
-  .img:hover{
-    opacity:39%;
+  .img:hover {
+    opacity: 39%;
   }
-
 
   @media (min-width: 740px) {
     .navegacao {
@@ -53,6 +51,10 @@ export const Main = styled.div`
     #icon {
       width: 16px;
       height: 16px;
+      transition: 3s;
+    }
+    #icon:hover {
+      opacity: 39%;
     }
     .navegacao {
       display: none;
@@ -73,5 +75,29 @@ export const Main = styled.div`
   }
   a:hover {
     color: #000000;
+  }
+`;
+
+export const Mobile = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100px;
+  max-width: 1440px;
+  justify-content: flex-start; /* alinha de acordo com o flex direction,ja que esta em coluna essa propriedade vai alterar por coluna */
+  align-items: flex-end;
+  flex-direction: column;
+  margin-top: 10px;
+
+  a {
+    margin: auto 20px;
+    text-decoration: none;
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 16px;
+    transition: 3s;
+    color: #ffffff;
+    cursor: pointer;
   }
 `;
